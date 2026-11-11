@@ -5,10 +5,11 @@ import { Header } from './components/Header/Header';
 import { HeroBanner } from './components/HeroBanner/HeroBanner';
 import { Categories } from './components/Categories/Categories';
 import { ProductShowcase } from './components/ProductShowcase/ProductShowcase';
+import { ProductModal } from './components/ProductModal/ProductModal';
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     fetchProducts().then((data) => {
@@ -28,6 +29,10 @@ function App() {
           showTabs={true}
         />
       </main>
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
     </>
   );
 }
