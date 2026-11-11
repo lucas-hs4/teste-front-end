@@ -1,0 +1,129 @@
+@use '../../styles/variables' as *;
+
+.product-showcase {
+  padding: 40px 0;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__title-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    background-color: #dedede;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary-blue;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid #bdbdbd;
+    background-color: $white;
+    margin-top: 8px;
+  }
+
+  &__tab {
+    height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3b3b3b;
+    text-transform: uppercase;
+    border-right: 1px solid #bdbdbd;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      color: $primary-blue;
+    }
+
+    &--active {
+      color: $primary-blue;
+      font-weight: 700;
+    }
+  }
+
+  &__see-all {
+    font-size: 15px;
+    font-weight: 700;
+    color: $text-dark;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+
+  &__carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 16px 8px;
+    width: 100%;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-dark;
+    z-index: 2;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: $primary-blue;
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    &--left {
+      left: -16px;
+    }
+
+    &--right {
+      right: -16px;
+    }
+  }
+}
