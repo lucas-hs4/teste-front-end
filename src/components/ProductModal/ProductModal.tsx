@@ -12,10 +12,6 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   const [quantity, setQuantity] = useState<number>(1);
 
   useEffect(() => {
-    setQuantity(1);
-  }, [product]);
-
-  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };

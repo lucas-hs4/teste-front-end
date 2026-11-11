@@ -37,9 +37,24 @@
   }
 
   &__logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     font-size: 28px;
     font-weight: 700;
-    color: $primary-blue;
+    color: #271c47;
     letter-spacing: -1px;
+    z-index: 1;
+    padding-left: 6px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      background-color: $primary-yellow;
+      border-radius: 50%;
+      z-index: -1;
+    }
   }
 }

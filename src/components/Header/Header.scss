@@ -49,12 +49,27 @@
   }
 
   &__logo {
-    font-size: 32px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 30px;
     font-weight: 700;
-    color: $primary-blue;
+    color: #271c47;
     letter-spacing: -1px;
     text-transform: lowercase;
     user-select: none;
+    z-index: 1;
+    padding-left: 6px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      background-color: $primary-yellow;
+      border-radius: 50%;
+      z-index: -1;
+    }
   }
 
   &__search {
@@ -153,17 +168,18 @@
       }
 
       &--subscription {
-        color: $primary-yellow;
-        font-weight: 700;
-
+        color: $text-gray;
+        font-weight: 600;
         svg {
-          color: $primary-yellow;
+          color: $text-gray;
         }
-
         &:hover {
-          color: color.adjust($primary-yellow, $lightness: -10%);
+          color: $primary-blue;
+          svg {
+            color: $primary-blue;
         }
       }
     }
+  }
   }
 }

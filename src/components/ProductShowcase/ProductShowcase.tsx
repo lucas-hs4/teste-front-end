@@ -28,7 +28,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (!carouselRef.current) return;
-    const scrollAmount = 324;
+    const scrollAmount = 310;
     carouselRef.current.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
       behavior: 'smooth',
@@ -36,7 +36,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
   };
 
   return (
-    <section id="produtos" className="product-showcase">
+    <section id={showTabs ? 'produtos' : undefined} className="product-showcase">
       <div className="container">
         <div className="product-showcase__header">
           <div className="product-showcase__title-wrapper">

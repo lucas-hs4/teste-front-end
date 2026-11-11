@@ -54,6 +54,7 @@ function App() {
       <Footer />
       
       <ProductModal
+        key={selectedProduct?.productName}
         product={selectedProduct}
         onClose={() => setSelectedProduct(null)}
       />

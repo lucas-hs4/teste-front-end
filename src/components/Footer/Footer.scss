@@ -21,7 +21,7 @@
       max-width: 520px;
 
       h2 {
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 600;
         margin-bottom: 8px;
       }
@@ -114,10 +114,25 @@
   }
 
   &__logo {
-    font-size: 32px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 30px;
     font-weight: 700;
-    color: $primary-blue;
+    color: #271c47;
     letter-spacing: -1px;
+    z-index: 1;
+    padding-left: 6px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      background-color: $primary-yellow;
+      border-radius: 50%;
+      z-index: -1;
+    }
   }
 
   &__socials {
