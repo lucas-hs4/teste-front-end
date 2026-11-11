@@ -1,11 +1,16 @@
+import { Header } from './components/Header/Header';
+
 function App() {
   return (
-    <main>
-      <div className="container">
-        <h1>Setup Econverse funcionando!</h1>
-      </div>
-    </main>
-  )
+    <>
+      <Header />
+      <main>
+        <div className="container">
+          <h1>Setup Econverse funcionando!</h1>
+        </div>
+      </main>
+    </>
+  );
 }
 
 export default App
