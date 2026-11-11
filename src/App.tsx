@@ -1,16 +1,17 @@
 import { Header } from './components/Header/Header';
+import { HeroBanner } from './components/HeroBanner/HeroBanner';
+import { Categories } from './components/Categories/Categories';
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <div className="container">
-          <h1>Setup Econverse funcionando!</h1>
-        </div>
+        <HeroBanner />
+        <Categories />
       </main>
     </>
   );
 }
 
-export default App
+export default App;
